@@ -7,6 +7,7 @@ Adds BlackMarket location and attachments to city.
 
 # Dependancies 
 mythic_notify - https://github.com/mythicrp/mythic_notify
+
 progressBars - https://github.com/torpidity/progressBars
 
 # Installation
