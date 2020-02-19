@@ -103,8 +103,8 @@ function Draw3DText(x,y,z, text)
     local factor = (string.len(text)) / 370
     DrawRect(_x,_y+0.0125, 0.015+ factor, 0.03, 41, 11, 41, 68)
 end
---[[
--- Create Blips
+--[[ You can choose if you want to allow/open this blip to show where the market is. 
+-- Default is invisible.
 Citizen.CreateThread(function()
 	for k,v in pairs(Config.Zones) do
 		for i = 1, #v.Pos, 1 do
@@ -130,8 +130,8 @@ Citizen.CreateThread(function()
 		for k,v in pairs(Config.Zones) do
 			for i = 1, #v.Pos, 1 do
 				if(Config.Type ~= -1 and GetDistanceBetweenCoords(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, true) < Config.DrawDistance) then
-					DrawMarker(Config.Type, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z - 0.99, 0, 0, 0, 0, 0, 0, 1.5, 1.5, 1.0, 139, 16, 20, 250, false, false, 2, true, false, false, false)
-                                        DrawMarker(Config.Type2, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z + 0.25, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 139, 16, 20, 250, false, false, 2, true, false, false, false)
+					DrawMarker(Config.Type, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z - 0.99, 0, 0, 0, 0, 0, 0, 1.5, 1.5, 1.0, Config.Color.r, Config.Color.g, Config.Color.b, 250, false, false, 2, true, false, false, false)
+                                        DrawMarker(Config.Type2, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z + 0.25, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, Config.Color.r, Config.Color.g, Config.Color.b, 250, false, false, 2, true, false, false, false)
 				end
 			end
 		end
