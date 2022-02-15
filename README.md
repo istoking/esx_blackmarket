@@ -1,3 +1,5 @@
+# UNMAINTAINED - I no longer work with ESX. QBCore is where it's at.
+
 # esx_blackmarket
 Rework of esx_shops, to add a blackmarket store for deluxe weapon skins, extended magazines, grips, flashlight attachment, suppressor, scope and ammo clips.
 
